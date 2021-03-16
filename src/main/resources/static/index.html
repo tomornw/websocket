@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your name here..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Message</label>
+                        <input type="text" id="message" class="form-control" placeholder="Your message here..."
+                            required>
+                    </div>
+                    <button id="send" class="btn btn-default" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="mydiv" class="table-wrapper-scroll-y table-scrollbar">
+                    <table id="mytable" class="table table-striped table-bordered ">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody id="chat">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>
